@@ -1,0 +1,51 @@
+---
+const { title, variant } = Astro.props;
+---
+
+<button class={variant}>
+  {title}
+</button>
+
+<style>
+  button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: auto;
+    padding: 8px 24px;
+    gap: 8px;
+    border-radius: 4px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .primary {
+    background-color: #ce5501;
+    color: #ffffff;
+  }
+  .primary:hover {
+    color: black;
+  }
+  .second {
+    background-color: white;
+    color: black;
+  }
+  .second:hover {
+    background-color: black;
+    color: white;
+  }
+  .third {
+    background-color: black;
+    color: white;
+  }
+  .third:hover {
+    background-color: white;
+    color: black;
+  }
+</style>
