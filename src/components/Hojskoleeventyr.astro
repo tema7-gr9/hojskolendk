@@ -1,0 +1,22 @@
+---
+const { title, text, variant} = Astro.props;
+---
+
+<section>
+    <div class="hojskoleeventyr-text">
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+    <div class="hojskoleeventyr-img">
+        <img src="http://dummyimage.com/600x400/000/fff" alt=""/>
+        <img src="http://dummyimage.com/600x400/000/fff" alt=""/>
+        <img src="http://dummyimage.com/600x400/000/fff" alt=""/>
+        <img src="http://dummyimage.com/600x400/000/fff" alt=""/>
+    </div>
+</section>
+
+<style>
+   .hojskoleeventyr-img{
+    display: flex;
+   } 
+</style>
