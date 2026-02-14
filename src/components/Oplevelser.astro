@@ -1,0 +1,38 @@
+---
+const { title, text, bgimage } = Astro.props;
+---
+
+<section class="oplevelser">
+  <div class="oplevelser-text">
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="oplevelser-img">
+    <img src="/public/images/sol.png" alt="sol" class="box" />
+    <img src="/public/images/strand.png" alt="strand" class="box" />
+    <img src="/public/images/hval.png" alt="hval" class="box" />
+    <img src="/public/images/by.png" alt="by" class="box" />
+    <img src="/public/images/luft.png" alt="luft" class="box" />
+  </div>
+</section>
+
+<style>
+  .oplevelser {
+    background-color: #d5e7ee;
+    height: 863px;
+  }
+  .oplevelser-img {
+    overflow-x: auto;
+    display: flex;
+  }
+
+  .box {
+    padding: 0.5rem;
+    gap: 1rem;
+    flex-basis: 10%;
+    flex-shrink: 0;
+
+    width: 50%;
+    height: auto;
+  }
+</style>
