@@ -1,7 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
-	
+  <Hero
+    headline="Dit højskoleeventyr starter her"
+    herotext1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-26 år."
+    herotext2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
+  >
+    <video slot="video" autoplay muted loop playsinline>
+      <source src="/public/video/hero-placeholder.mov" />
+    </video>
+    <Button slot="buttons" title="Se rejsekalender" variant="primary" />
+    <Button slot="buttons" title="Infomøder" variant="second" />
+  </Hero>
 </Layout>
