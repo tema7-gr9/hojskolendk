@@ -1,0 +1,22 @@
+---
+const { image, text } = Astro.props;
+---
+
+<div class="polaroid">
+  <article style=`background-image: url(${image})`></article>
+  <p class="polaroid-text">
+    {text}
+  </p>
+</div>
+
+<style>
+  .polaroid {
+    display: flex;
+    height: 430px;
+    padding: 13px 18px 27px 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+  }
+</style>
