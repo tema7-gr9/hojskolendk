@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
+import Oplevelser from "../components/Oplevelser.astro";
 ---
 
 <Layout>
@@ -16,4 +17,31 @@ import Button from "../components/Button.astro";
     <Button slot="buttons" title="Se rejsekalender" variant="primary" />
     <Button slot="buttons" title="Infomøder" variant="second" />
   </Hero>
+  <Oplevelser
+    title="Oplevelser for livet & fantastiske eventyr"
+    text="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år. Vi brænder for
+    oplevelser, fællesskabet og det gode eventyr."
+  >
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+    <video slot="media" autoplay muted loop playsinline>
+      <source src="/public/video/video-karrusel-placeholder.mp4" />
+    </video>
+  </Oplevelser>
 </Layout>
