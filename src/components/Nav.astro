@@ -57,7 +57,21 @@ import "../css/main.css";
     <a href="om">Om os</a>
     <a href="kontakt">Kontakt os</a>
   </div>
-  <Button variant="primary" title="Bestil Ophold" />
+  <div class="button">
+    <Button variant="primary" title="Bestil Ophold" />
+  </div>
+  <div class="burger">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="40px"
+      viewBox="0 -960 960 960"
+      width="40px"
+      fill="#CE5501"
+      ><path
+        d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+      ></path></svg
+    >
+  </div>
 </nav>
 
 <style>
@@ -85,5 +99,26 @@ import "../css/main.css";
   }
   .link-container a:hover {
     color: #ce5501;
+  }
+  .burger,
+  .burger svg {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    nav {
+      padding: 0 20px;
+      height: 80px;
+    }
+    .link-container a {
+      display: none;
+    }
+    .button {
+      display: none;
+    }
+    .burger,
+    .burger svg {
+      display: block;
+    }
   }
 </style>
