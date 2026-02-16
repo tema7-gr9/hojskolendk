@@ -2,11 +2,13 @@
 const { image, text, variant } = Astro.props;
 ---
 
-<div id="polaroid" class={variant}>
-  <article style=`background-image: url(${image})`></article>
-  <p class="polaroid-text">
-    {text}
-  </p>
+<div>
+  <div id="polaroid" class={variant}>
+    <article style=`background-image: url(${image})`></article>
+    <p class="polaroid-text">
+      {text}
+    </p>
+  </div>
 </div>
 
 <style>
@@ -21,8 +23,9 @@ const { image, text, variant } = Astro.props;
     justify-content: center;
     align-items: center;
     gap: 24px;
-    box-shadow: 0 3.282px 82.053px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.12);
   }
+
   article {
     aspect-ratio: 1/1;
     height: 330px;
