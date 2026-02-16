@@ -2,7 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
-import Oplevelser from "../components/Oplevelser.astro";
+import Mediasektion from "../components/Mediasektion.astro";
+import Videokarrusel from "../components/Videokarrusel.astro";
+import Polaroidflex from "../components/Polaroidflex.astro";
+import Historier from "../components/Historier.astro";
 ---
 
 <Layout>
@@ -17,31 +20,49 @@ import Oplevelser from "../components/Oplevelser.astro";
     <Button slot="buttons" title="Se rejsekalender" variant="primary" />
     <Button slot="buttons" title="Infomøder" variant="second" />
   </Hero>
-  <Oplevelser
+  <Mediasektion
+    variant="blue"
     title="Oplevelser for livet & fantastiske eventyr"
-    text="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år. Vi brænder for
-    oplevelser, fællesskabet og det gode eventyr."
+    text1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år."
+    text2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
   >
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-    <video slot="media" autoplay muted loop playsinline>
-      <source src="/public/video/video-karrusel-placeholder.mp4" />
-    </video>
-  </Oplevelser>
+    <Videokarrusel>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/public/video/video-karrusel-placeholder.mp4" />
+      </video>
+    </Videokarrusel>
+  </Mediasektion>
+  <Mediasektion
+    variant="orange"
+    title="Klar på højskoleeventyr, fælleskab & masser af adventure?"
+    text1="Her er lidt af alt det, som du får, når du tager på et højskoleophold med os."
+  >
+    <Polaroidflex />
+  </Mediasektion>
+  <Mediasektion
+    variant="blue"
+    title="Historier fra eleverne"
+    text1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år."
+    text2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
+  >
+    <Historier />
+  </Mediasektion>
 </Layout>
