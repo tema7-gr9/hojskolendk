@@ -1,0 +1,48 @@
+---
+const { title, text1, text2, variant } = Astro.props;
+import "../css/main.css";
+---
+
+<section id="mediasektion" class={variant}>
+  <div class="text">
+    <h2>{title}</h2>
+    <div>
+      <p>{text1}</p>
+      <p>{text2}</p>
+    </div>
+  </div>
+  <div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  #mediasektion {
+    position: relative;
+    height: auto;
+    min-height: 110dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px 0;
+  }
+  #mediasektion > :global(*) {
+    width: 100%;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .orange {
+    background-color: #f8e6d9;
+  }
+  .blue {
+    background-color: #d5e7ee;
+  }
+</style>
