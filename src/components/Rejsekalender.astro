@@ -2,6 +2,9 @@
 import "../css/main.css";
 import Button from "./Button.astro";
 const { title, subtitle, text1, text2, text3, feature } = Astro.props;
+import { Image } from "astro:assets";
+import billede1 from "../images/placeholder-img-2.jpg";
+import billede2 from "../images/placeholder-img-3.jpg";
 ---
 
 <section class="rejsekalender">
@@ -17,12 +20,11 @@ const { title, subtitle, text1, text2, text3, feature } = Astro.props;
         <p>{text2}</p>
         <p>{text3}</p>
       </div>
-
       <Button variant="primary" title="Se rejsekalendaren" />
     </div>
     <div class="img-container">
-      <img src="../src/images/placeholder-img-2.jpg" alt="placeholder" />
-      <img src="../src/images/placeholder-img-3.jpg" alt="placeholder" />
+      <Image src={billede1} class="img" alt="Placeholder" width={350} />
+      <Image src={billede2} class="img" alt="Placeholder" width={350} />
     </div>
   </div>
   <div class="badge">
@@ -175,7 +177,7 @@ const { title, subtitle, text1, text2, text3, feature } = Astro.props;
   }
   .indhold {
     display: flex;
-    gap: 50px;
+    gap: 100px;
   }
   .info {
     display: flex;
@@ -184,15 +186,21 @@ const { title, subtitle, text1, text2, text3, feature } = Astro.props;
   }
   .img-container {
     display: flex;
-    gap: 10px;
+    gap: 16px;
   }
   .img-container :global(img) {
-    aspect-ratio: 3/5;
-    width: 350px;
-    height: auto;
-    border-radius: 16px;
+    aspect-ratio: 4 / 6;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
   }
   p {
     max-width: 50ch;
+    margin-bottom: 10px;
+  }
+  .badge {
+    position: absolute;
+    top: 250px;
+    right: 130px;
   }
 </style>
