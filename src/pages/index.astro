@@ -2,6 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
+import Mediasektion from "../components/Mediasektion.astro";
+import Videokarrusel from "../components/Videokarrusel.astro";
+import Polaroidflex from "../components/Polaroidflex.astro";
+import Historier from "../components/Historier.astro";
+import Gladelever from "../components/Gladelever.astro";
+import Infomoede from "../components/Infomoede.astro";
+import Rejsekalender from "../components/Rejsekalender.astro";
 ---
 
 <Layout>
@@ -11,9 +18,73 @@ import Button from "../components/Button.astro";
     herotext2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
   >
     <video slot="video" autoplay muted loop playsinline>
-      <source src="/public/video/hero-placeholder.mov" />
+      <source src="/video/hero-placeholder.mov" />
     </video>
     <Button slot="buttons" title="Se rejsekalender" variant="primary" />
     <Button slot="buttons" title="Infomøder" variant="second" />
   </Hero>
+  <Mediasektion
+    variant="blue"
+    title="Oplevelser for livet & fantastiske eventyr"
+    text1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år."
+    text2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
+  >
+    <Videokarrusel>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+      <video slot="media" autoplay muted loop playsinline>
+        <source src="/video/video-karrusel-placeholder.mp4" />
+      </video>
+    </Videokarrusel>
+  </Mediasektion>
+  <Gladelever
+    title="+3.000 glade elever siden 2010"
+    text="96% af alle elever anbefaler HØJSKOLENDK (2025)."
+  />
+  <Mediasektion
+    variant="orange"
+    title="Klar på højskoleeventyr, fælleskab & masser af adventure?"
+    text1="Her er lidt af alt det, som du får, når du tager på et højskoleophold med os."
+  >
+    <Polaroidflex />
+  </Mediasektion>
+  <Infomoede
+    subtitle="ONLINE INFOMØDE"
+    title="Kom til infomøde"
+    text="Kig forbi et af vores hyggelige online-infomøder – vi glæder os til at møde dig!"
+    timelabel="Kl. 18.30 - 20.00"
+    datelabel="07 Januar 2026"
+  />
+  <Mediasektion
+    variant="blue"
+    title="Historier fra eleverne"
+    text1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år."
+    text2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
+  >
+    <Historier />
+  </Mediasektion>
+  <Rejsekalender
+    title="Et fællesskab, der starter på rejsen og varer hele livet"
+    subtitle="Få dit livs eventyr"
+    feature="Medlem af Rejsegarantifonden"
+    text1="Du rejser sammen med ca. 30 andre unge og du kender dem ikke. Endnu. Men om få uger har I delt jetlag, vilde grin og livsændrene bucketliste oplevelser sammen. Det er det der sker, når man tager en flok eventyrslystne unge ud i verden sammen."
+    text2="Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden. Alle vores rejseledere har selv været HØJSKOLENDK elever i tidernes morgen og er klar til at byde dig velkommen."
+    text3="Vi glæder os til at lære dig at kende!"
+  />
 </Layout>

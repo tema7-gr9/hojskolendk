@@ -1,0 +1,50 @@
+---
+import Polaroid from "./Polaroid.astro";
+---
+
+<div class="polaroid-clip">
+  <div class="polaroid-flex">
+    <div class="p1">
+      <Polaroid
+        text="Sammenhold"
+        image="img/sammenhold.jpeg"
+        variant="meduret5"
+      />
+    </div>
+    <div class="p2">
+      <Polaroid
+        text="Bucketlist Oplevelser"
+        image="img/bucketlist.jpeg"
+        variant="moduret2"
+      />
+    </div>
+    <div class="p3">
+      <Polaroid
+        text="En rejseleder, der støtter dig"
+        image="img/sammenhold.jpeg"
+        variant="meduret2"
+      />
+    </div>
+    <div class="p4">
+      <Polaroid
+        text="Venner for livet"
+        image="img/venner.jpeg"
+        variant="moduret5"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .polaroid-clip {
+    padding: 24px 0 50px 0;
+    clip-path: inset(0);
+    overflow-x: auto;
+  }
+  .polaroid-flex {
+    height: 110%;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+  }
+</style>

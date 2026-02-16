@@ -1,0 +1,50 @@
+---
+const { image, text, variant } = Astro.props;
+---
+
+<div>
+  <div id="polaroid" class={variant}>
+    <article style=`background-image: url(${image})`></article>
+    <p class="polaroid-text">
+      {text}
+    </p>
+  </div>
+</div>
+
+<style>
+  #polaroid {
+    display: flex;
+    background-color: white;
+    height: 430px;
+    width: 380px;
+    border-radius: 9px;
+    padding: 18px 18px 27px 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  article {
+    aspect-ratio: 1/1;
+    height: 330px;
+    width: 330px;
+    background-size: cover;
+  }
+  .polaroid-text {
+    font-weight: 700;
+  }
+  .meduret2 {
+    transform: rotate(2deg);
+  }
+  .meduret5 {
+    transform: rotate(5deg);
+  }
+  .moduret2 {
+    transform: rotate(-2deg);
+  }
+  .moduret5 {
+    transform: rotate(-5deg);
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+const { title, text } = Astro.props;
+import "../css/main.css";
+---
+
+<section id="reviews">
+  <div class="text">
+    <h2>{title}</h2>
+    <div>
+      <p>{text}</p>
+    </div>
+  </div>
+  <div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  #reviews {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    padding: 80px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .text div p {
+    font-weight: 700;
+    color: #ce5501;
+  }
+</style>
