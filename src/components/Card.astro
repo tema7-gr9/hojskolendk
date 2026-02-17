@@ -1,9 +1,10 @@
 ---
 const { headline, subline, poptext, poptext2, image } = Astro.props;
+import "../css/main.css";
 ---
 
 <article style=`background-image: url(${image});`>
-  <h2>{headline}</h2>
+  <p class="varighed">{headline}</p>
   <div class="content">
     {poptext && <p class="pop">{poptext}</p>}
     <h3>{subline}</h3>
@@ -34,7 +35,7 @@ const { headline, subline, poptext, poptext2, image } = Astro.props;
     height: 426px;
   }
 
-  h2 {
+  .varighed {
     border-radius: 4px;
     background: #ce5501;
     display: flex;
@@ -54,10 +55,7 @@ const { headline, subline, poptext, poptext2, image } = Astro.props;
 
   h3 {
     color: #fff;
-    font-family: "Dela Gothic One";
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 120%; /* 28.8px */
     margin: 0;
   }
@@ -70,7 +68,9 @@ const { headline, subline, poptext, poptext2, image } = Astro.props;
     font-weight: 700;
     line-height: 120%; /* 16.8px */
   }
-
+  .pop_afgange {
+    padding-top: 10px;
+  }
   .content {
     display: flex;
     flex-direction: column;

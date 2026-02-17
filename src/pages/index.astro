@@ -9,6 +9,7 @@ import Historier from "../components/Historier.astro";
 import Gladelever from "../components/Gladelever.astro";
 import Infomoede from "../components/Infomoede.astro";
 import Rejsekalender from "../components/Rejsekalender.astro";
+import Cardgrid from "../components/Cardgrid.astro";
 ---
 
 <Layout>
@@ -23,6 +24,11 @@ import Rejsekalender from "../components/Rejsekalender.astro";
     <Button slot="buttons" title="Se rejsekalender" variant="primary" />
     <Button slot="buttons" title="Infomøder" variant="second" />
   </Hero>
+  <Cardgrid
+    title="Vælg dit eventyr"
+    text1="HØJSKOLENDK er en dansk højskole for unge i alderen 18-28 år."
+    text2="Vi brænder for oplevelser, fællesskabet og det gode eventyr."
+  />
   <Mediasektion
     variant="blue"
     title="Oplevelser for livet & fantastiske eventyr"

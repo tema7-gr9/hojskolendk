@@ -64,7 +64,7 @@
     </a>
   </div>
   <div class="center-text">
-    <div>
+    <div class="ct1">
       <svg
         width="14"
         height="13"
@@ -78,7 +78,7 @@
       </svg>
       <p>4,8/5 stjerner på TrustPilot</p>
     </div>
-    <div>
+    <div class="ct2">
       <svg
         width="19"
         height="19"
@@ -92,7 +92,7 @@
       </svg>
       <p>Medlem af Rejsegarantifonden</p>
     </div>
-    <div>
+    <div class="ct3">
       <svg
         width="15"
         height="16"
@@ -107,7 +107,7 @@
       <p>Rejser for unge siden 2010</p>
     </div>
   </div>
-  <div>
+  <div class="help">
     <svg
       width="21"
       height="21"
@@ -148,8 +148,34 @@
     color: #111;
     font-size: 0.875rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
     letter-spacing: -0.0175rem;
+  }
+
+  @media (max-width: 800px) {
+    header {
+      padding: 10px;
+    }
+    .some-icons a {
+      display: none;
+      padding: 0;
+    }
+    .center-text div {
+      padding-right: 0;
+    }
+    .ct3 svg,
+    .ct3 p {
+      display: none;
+    }
+    .help svg,
+    .help p {
+    }
+    header div {
+      gap: 5px;
+    }
+    header div p {
+      font-size: 0.7rem;
+    }
   }
 </style>
