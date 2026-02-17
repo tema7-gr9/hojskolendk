@@ -1,0 +1,321 @@
+---
+const { title, text1, text2, text3, text4, variant } = Astro.props;
+import "../css/main.css";
+
+const images = {
+  top: "/img/sammenhold.jpeg",
+  mid: "../img/venner.jpeg",
+  bottom: "../img/bucketlist.jpeg",
+};
+---
+
+<section class={`info-meeting ${variant ?? ""}`}>
+  <div class="info-grid">
+    <div class="left">
+      <div class="hojskoleeventyr-text">
+        <h2>{title}</h2>
+        <p>{text1}</p>
+         <p>{text2}</p>
+          <p>{text3}</p>
+           <p>{text4}</p>
+      </div>
+
+      <div class="signup-card">
+        <form class="signup-form" action="#" method="post">
+          <div class="field">
+            <select class="select-pill" name="mode" required>
+              <option value="" selected disabled>Vælg møde</option>
+              <option value="online"
+                >Online d. 06. januar 2026, klokken 18.30 - 20.00</option
+              >
+              <option value="fysisk"
+                >Online d. 03. februar 2026, klokken 18.30 - 20.00</option
+              >
+              <option value="fysisk"
+                >Online d. 17. marts 2026, klokken 18.30 - 20.00</option
+              >
+              <option value="fysisk"
+                >Online d. 14. april 2026, klokken 18.30 - 20.00</option
+              >
+            </select>
+          </div>
+
+          <div class="field">
+            <input
+              class="input-pill"
+              type="text"
+              name="name"
+              placeholder="Navn *"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <input
+              class="input-pill"
+              type="email"
+              name="email"
+              placeholder="Email *"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <input
+              class="input-pill"
+              type="tel"
+              name="phone"
+              placeholder="Telefon-nummer *"
+              required
+            />
+          </div>
+
+          <button class="btn-submit" type="submit">Tilmeld</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="right" aria-hidden="true">
+      <div class="polaroid p1">
+        <img src={images.top} alt="" loading="lazy" />
+        <div class="cap">Sammenhold</div>
+      </div>
+
+      <div class="polaroid p2">
+        <img src={images.mid} alt="" ' loading="lazy" />
+        <div class="cap">Venner for livet</div>
+      </div>
+
+      <div class="polaroid p3">
+        <img src={images.bottom} alt="" loading="lazy" />
+        <div class="cap">Bucketlist oplevelser</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info-meeting {
+    background: #f6e3d8;
+    padding: clamp(24px, 4vw, 64px) 18px;
+  }
+
+  .info-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(24px, 4vw, 72px);
+    align-items: start;
+  }
+
+  .left {
+    min-width: 0;
+  }
+
+  .right {
+    position: relative;
+    min-height: 520px;
+  }
+
+  .right::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+   
+    
+    pointer-events: none;
+  }
+  .text p {
+    margin: 0 0 14px;
+    padding: 100px;
+  }
+  .text .bold {
+    font-weight: 800;
+  }
+  .polaroid {
+    position: absolute;
+    width: clamp(220px, 22vw, 230px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 14px 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    transform-origin: center;
+  }
+
+  .polaroid img {
+    width: 100%;
+    height: auto
+
+    display: block;
+    border-radius: 6px;
+    background: #eee;
+  }
+
+  .cap {
+    margin-top: 10px;
+    font-weight: 800;
+    color: #0a0a1a;
+    text-align: center;
+  }
+
+  .p1 {
+    top: 10px;
+    left: 60px;
+    transform: rotate(-6deg);
+    z-index: 3;
+  }
+  .p2 {
+    top: 170px;
+    left: 210px;
+    transform: rotate(6deg);
+    z-index: 2;
+  }
+  .p3 {
+    top: 300px;
+    left: 70px;
+    transform: rotate(-10deg);
+    z-index: 1;
+  }
+
+  .signup-card {
+    width: 320px;
+    padding: 18px 18px 20px;
+    background: #f6e3d8;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family:
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Arial,
+      sans-serif;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .input-pill,
+  .select-pill {
+    width: 100%;
+    height: 54px;
+    padding: 0 18px;
+    border: none;
+    outline: none;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #6f6f6f;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+
+  .input-pill::placeholder {
+    color: #8a8a8a;
+  }
+
+  .select-pill {
+    background: #f1a06b;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+      linear-gradient(45deg, transparent 50%, #fff 50%),
+      linear-gradient(135deg, #fff 50%, transparent 50%);
+    background-position:
+      calc(100% - 22px) 22px,
+      calc(100% - 16px) 22px;
+    background-size:
+      7px 7px,
+      7px 7px;
+    background-repeat: no-repeat;
+  }
+
+  .input-pill:focus,
+  .select-pill:focus {
+    box-shadow: 0 0 0 3px rgba(241, 160, 107, 0.35);
+  }
+
+  .btn-submit {
+    width: 110px;
+    height: 44px;
+    border: none;
+    border-radius: 4px;
+    background: #cc5d18;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-submit:hover {
+    filter: brightness(0.95);
+  }
+
+  .btn-submit:active {
+    transform: translateY(1px);
+  }
+.hojskoleeventyr-text h2 {
+  margin: 0 0 14px;
+}
+
+.hojskoleeventyr-text p {
+  text-align: left;
+  padding: 20px;
+}
+
+  @media (max-width: 980px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .signup-card {
+      width: min(360px, 100%);
+    }
+
+    .right {
+      min-height: 560px;
+      margin-top: 8px;
+    }
+
+    .p1 {
+      left: 30px;
+    }
+    .p2 {
+      left: 180px;
+    }
+    .p3 {
+      left: 40px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .polaroid {
+      width: 240px;
+    }
+
+    .p1 {
+      top: 0px;
+      left: 10px;
+    }
+    .p2 {
+      top: 190px;
+      left: 70px;
+    }
+    .p3 {
+      top: 360px;
+      left: 10px;
+    }
+  }
+</style>
